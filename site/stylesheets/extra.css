@@ -40,6 +40,42 @@ input {
   font-weight: 650;
 }
 
+.xiaota-maintainer-badge {
+  background: #d9a441;
+  border: 1px solid rgb(255 255 255 / 24%);
+  border-radius: 999px;
+  color: #17233a;
+  flex: 0 0 auto;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  margin: 0 0.35rem;
+  padding: 0.38rem 0.55rem;
+  white-space: nowrap;
+}
+
+.xiaota-edition-note {
+  align-items: center;
+  background: linear-gradient(110deg, rgb(36 59 97 / 8%), rgb(217 164 65 / 12%));
+  border: 1px solid rgb(217 164 65 / 55%);
+  border-radius: 0.35rem;
+  display: flex;
+  gap: 0.65rem;
+  margin: 0 0 1.5rem;
+  padding: 0.75rem 0.9rem;
+}
+
+.xiaota-edition-note strong {
+  color: #9a6411;
+  flex: 0 0 auto;
+}
+
+.xiaota-edition-note span {
+  color: var(--dsh-muted);
+  font-size: 0.72rem;
+}
+
 .md-grid {
   max-width: 78rem;
 }
@@ -459,6 +495,16 @@ html.book-sidebar-collapsed .book-sidebar-toggle__icon--expand {
 }
 
 @media screen and (max-width: 44rem) {
+  .xiaota-maintainer-badge {
+    display: none;
+  }
+
+  .xiaota-edition-note {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
   .md-typeset img.book-technical-figure {
     height: auto !important;
     width: 100% !important;

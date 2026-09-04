@@ -2,12 +2,12 @@
 #import "markdown.typ": render-markdown
 #import "cover.typ": accent, cover-page
 
-#set document(title: "从零开始玩转 DeepSeek Harness")
+#set document(title: "小塔 · 从零开始玩转 DeepSeek Harness", author: "小塔维护版")
 
 #cover-page(
   lead: [从零开始玩转],
   brand: [DeepSeek Harness],
-  subtitle: [面向普通用户的 Agent 实践指南],
+  subtitle: [小塔维护版 · 面向普通用户的 Agent 实践指南],
 )
 
 #show: overall

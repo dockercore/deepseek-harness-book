@@ -8,7 +8,7 @@
 #let accent-dark = rgb("#253A9B")
 #let rule-colour = rgb("#D9DEEF")
 
-#let repository-url = "https://github.com/Prism-Shadow/deepseek-harness-book"
+#let repository-url = "https://github.com/dockercore/deepseek-harness-book"
 
 #let fish-mark(width: 10mm) = image("/book/assets/fish-mark.svg", width: width)
 

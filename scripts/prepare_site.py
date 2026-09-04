@@ -34,7 +34,7 @@ INTRODUCTION_META_TITLE = re.compile(r"^title:[^\n]*\n", flags=re.MULTILINE)
 EMPTY_FRONT_MATTER = re.compile(r"\A---\n\s*---\n")
 README_DEMO_LINK = re.compile(r"\]\((demo/[^)]+)\)")
 README_CHAPTER_LINK = re.compile(
-    r"\]\(https://dshbook\.penguin\.ooo/(chapter\d+)/\)"
+    r"\]\(https://deepseek-harness\.zailing\.ai/(chapter\d+)/\)"
 )
 
 
@@ -193,7 +193,7 @@ def transform_readme(text: str, repository_url: str) -> str:
         lambda match: f"]({match.group(1)}.md)", rendered
     )
     rendered = rendered.replace(
-        "](https://dshbook.penguin.ooo/)", "](index.md)"
+        "](https://deepseek-harness.zailing.ai/)", "](index.md)"
     )
     repository = repository_url.rstrip("/")
     rendered = README_DEMO_LINK.sub(
@@ -202,7 +202,7 @@ def transform_readme(text: str, repository_url: str) -> str:
     )
     metadata = (
         "---\n"
-        "title: DeepSeek Harness 实战指南\n"
+        "title: 小塔 · DeepSeek Harness 实战指南\n"
         "source_edit_path: README.md\n"
         "---\n\n"
     )
@@ -214,7 +214,7 @@ def prepare_site(
     output_dir: Path,
     site_assets: Path,
     readme_path: Path | None = None,
-    repository_url: str = "https://github.com/Prism-Shadow/dsh-book",
+    repository_url: str = "https://github.com/dockercore/deepseek-harness-book",
 ) -> list[Path]:
     safe_output_dir(book_dir, output_dir)
     outline = book_dir / "outline.md"
@@ -278,7 +278,7 @@ def main() -> None:
     parser.add_argument("--readme", type=Path, default=Path("README.md"))
     parser.add_argument(
         "--repository-url",
-        default="https://github.com/Prism-Shadow/dsh-book",
+        default="https://github.com/dockercore/deepseek-harness-book",
     )
     args = parser.parse_args()
     generated = prepare_site(

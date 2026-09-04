@@ -22,12 +22,12 @@ class PrepareSiteTest(unittest.TestCase):
 
 ![图片](book/assets/example.png)
 
-[在线阅读](https://dshbook.penguin.ooo/)
-[开始](https://dshbook.penguin.ooo/chapter1/)
+[在线阅读](https://deepseek-harness.zailing.ai/)
+[开始](https://deepseek-harness.zailing.ai/chapter1/)
 [Demo](demo/example/)
 """
         rendered = transform_readme(source, "https://github.com/example/book")
-        self.assertIn("title: DeepSeek Harness 实战指南", rendered)
+        self.assertIn("title: 小塔 · DeepSeek Harness 实战指南", rendered)
         self.assertIn("source_edit_path: README.md", rendered)
         self.assertIn("![图片](assets/example.png)", rendered)
         self.assertIn("[在线阅读](index.md)", rendered)

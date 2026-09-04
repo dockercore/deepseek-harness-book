@@ -24,6 +24,8 @@
     } catch {}
   </script>
   <meta property="og:type" content="website">
+  <meta name="author" content="小塔">
+  <meta name="theme-color" content="#243b61">
   <meta property="og:site_name" content="{{ book_title }}">
   <meta property="og:title" content="{{ config.site_name if page and page.is_homepage else (page.title if page and page.title else book_title) }}">
   <meta property="og:description" content="{{ config.site_description }}">
@@ -37,6 +39,10 @@
 {% block content %}
   {% if page and page.is_homepage %}
     <div class="readme-page">
+      <div class="xiaota-edition-note" role="note">
+        <strong>小塔维护版</strong>
+        <span>持续整理、构建与部署；正文保留上游作者和社区贡献者的原始成果。</span>
+      </div>
       {{ super() }}
     </div>
   {% else %}

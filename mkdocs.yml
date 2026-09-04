@@ -1,13 +1,14 @@
-site_name: DeepSeek Harness 实战指南
-site_description: DeepSeek Harness 实战指南：从基础使用到 Harness、Cordis 与插件扩展
-site_url: https://dshbook.penguin.ooo/
-repo_name: Prism-Shadow/dsh-book
-repo_url: https://github.com/Prism-Shadow/dsh-book
+site_name: 小塔 · DeepSeek Harness 实战指南
+site_description: 小塔维护的 DeepSeek Harness 中文实战指南：从基础使用到 Harness、Cordis 与插件扩展
+site_url: https://deepseek-harness.zailing.ai/
+repo_name: dockercore/deepseek-harness-book
+repo_url: https://github.com/dockercore/deepseek-harness-book
 edit_uri: edit/main/book/
-copyright: 从零开始玩转 DeepSeek Harness
+copyright: 原作：DeepSeek Harness Book 社区贡献者 · 小塔维护版
 
 extra:
-  book_title: 从零开始玩转 DeepSeek Harness
+  book_title: 小塔 · 从零开始玩转 DeepSeek Harness
+  maintainer: 小塔
   generator: false
 
 docs_dir: output/site-src
@@ -76,7 +77,7 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-  - DeepSeek Harness 实战指南: index.md
+  - 小塔 · DeepSeek Harness 实战指南: index.md
   - 导言: introduction.md
   - 第一部分　玩转 dsh:
       - 第1章　让 Agent“活”起来: chapter1.md
