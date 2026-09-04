@@ -108,6 +108,9 @@ class PrepareSiteTest(unittest.TestCase):
             assets.mkdir(parents=True)
             image = b"\x89PNG\r\n\x1a\nunchanged"
             (assets / "example.png").write_bytes(image)
+            source_backup = assets / "chapter1" / "source"
+            source_backup.mkdir(parents=True)
+            (source_backup / "full.png").write_bytes(image)
             (book / "outline.md").write_text(
                 "# 第一部分　示例\n\n## 第1章　开始\n\n### 1.1 阅读\n",
                 encoding="utf-8",
@@ -130,6 +133,7 @@ class PrepareSiteTest(unittest.TestCase):
             output = root / "output" / "site-src"
             prepare_site(book, output, site_assets)
             self.assertEqual((output / "assets/example.png").read_bytes(), image)
+            self.assertFalse((output / "assets/chapter1/source").exists())
             self.assertIn("示例首页", (output / "index.md").read_text())
             self.assertIn("# 导言", (output / "introduction.md").read_text())
             self.assertIn(

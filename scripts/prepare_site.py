@@ -235,6 +235,10 @@ def prepare_site(
         shutil.rmtree(output_dir)
     output_dir.mkdir(parents=True)
     shutil.copytree(book_dir / "assets", output_dir / "assets")
+    # `assets/**/source/` 保存供编辑与重裁剪使用的原始截图。正文只引用同级
+    # 的发布版图片；排除这些备份可把静态站点体积减少约一半，避免重复上传。
+    for source_backup in (output_dir / "assets").glob("chapter*/source"):
+        shutil.rmtree(source_backup)
     for directory in ("assets", "javascripts", "stylesheets"):
         source = site_assets / directory
         if source.is_dir():
